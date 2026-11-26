@@ -3,16 +3,63 @@
   "updated": "2026-11-26",
   "plugins": [
     {
-      "name": "Example Wireless Mouse",
+      "name": "AJAZZ AJ179 V2",
       "version": "1.0.0",
       "author": "mouse-hub",
-      "description": "Example plugin for wireless mouse with battery",
-      "vid": 4660,
-      "pid": 22575,
+      "description": "2.4G wireless mouse, battery/charging/DPI/poll",
+      "vid": 9370,
+      "pid": 23599,
       "device_type": "mouse",
       "wireless": true,
-      "file": "example-mouse.json",
-      "tags": ["wireless", "battery", "example"]
+      "file": "aj179.json",
+      "tags": [
+        "wireless",
+        "battery"
+      ]
+    },
+    {
+      "name": "Pilo Gaming Mouse",
+      "version": "1.0.0",
+      "author": "mouse-hub",
+      "description": "Wired gaming mouse 1200-7200 DPI",
+      "vid": 12538,
+      "pid": 5889,
+      "device_type": "mouse",
+      "wireless": false,
+      "file": "pilo.json",
+      "tags": [
+        "wired"
+      ]
+    },
+    {
+      "name": "Logitech G502 HERO",
+      "version": "1.0.0",
+      "author": "mouse-hub",
+      "description": "Wired gaming mouse",
+      "vid": 1133,
+      "pid": 49291,
+      "device_type": "mouse",
+      "wireless": false,
+      "file": "g502.json",
+      "tags": [
+        "wired",
+        "logitech"
+      ]
+    },
+    {
+      "name": "K75 Mechanical",
+      "version": "1.0.0",
+      "author": "mouse-hub",
+      "description": "Mechanical keyboard 2.4G",
+      "vid": 13652,
+      "pid": 64137,
+      "device_type": "keyboard",
+      "wireless": true,
+      "file": "k75.json",
+      "tags": [
+        "keyboard",
+        "wireless"
+      ]
     }
   ]
 }
