@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updated": "2026-11-26",
+  "plugins": [
+    {
+      "name": "Example Wireless Mouse",
+      "version": "1.0.0",
+      "author": "mouse-hub",
+      "description": "Example plugin for wireless mouse with battery",
+      "vid": 4660,
+      "pid": 22575,
+      "device_type": "mouse",
+      "wireless": true,
+      "file": "example-mouse.json",
+      "tags": ["wireless", "battery", "example"]
+    }
+  ]
+}

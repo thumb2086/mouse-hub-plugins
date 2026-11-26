@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mouse Hub Plugin",
+  "type": "object",
+  "required": ["name", "version", "vid", "pid", "device_type", "read"],
+  "properties": {
+    "name": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "author": { "type": "string", "maxLength": 64 },
+    "description": { "type": "string", "maxLength": 256 },
+    "vid": { "type": "integer", "minimum": 0, "maximum": 65535 },
+    "pid": { "type": "integer", "minimum": 0, "maximum": 65535 },
+    "device_type": { "enum": ["mouse", "keyboard", "headset", "other"] },
+    "wireless": { "type": "boolean" },
+    "read": {
+      "type": "object",
+      "properties": {
+        "battery": { "$ref": "#/$defs/readRule" },
+        "dpi": { "$ref": "#/$defs/readRule" },
+        "poll_rate": { "$ref": "#/$defs/readRule" }
+      }
+    }
+  },
+  "$defs": {
+    "readRule": {
+      "type": "object",
+      "required": ["method"],
+      "properties": {
+        "method": { "enum": ["output_report", "feature_report"] },
+        "interface": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "report_id": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "opcode": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "battery_byte": { "type": "integer", "minimum": 0, "maximum": 63 },
+        "charging_byte": { "type": "integer", "minimum": 0, "maximum": 63 },
+        "charging_bit": { "type": "integer", "minimum": 0, "maximum": 7 },
+        "charging_inverted": { "type": "boolean" },
+        "stage_byte": { "type": "integer", "minimum": 0, "maximum": 63 },
+        "stage_shift": { "type": "integer", "minimum": 0, "maximum": 7 },
+        "stage_mask": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "data_start": { "type": "integer", "minimum": 0, "maximum": 63 },
+        "stage_stride": { "type": "integer", "minimum": 1, "maximum": 8 },
+        "multiplier": { "type": "integer", "minimum": 1, "maximum": 1000 },
+        "value_byte": { "type": "integer", "minimum": 0, "maximum": 63 },
+        "map": { "type": "object", "additionalProperties": { "type": "integer" } }
+      }
+    }
+  }
+}
