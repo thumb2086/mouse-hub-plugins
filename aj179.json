@@ -1,0 +1,15 @@
+{
+  "name": "AJAZZ AJ179 V2",
+  "version": "1.0.0",
+  "author": "mouse-hub",
+  "description": "2.4G 無線滑鼠，電量/充電/DPI/回報率",
+  "vid": 9370,
+  "pid": 23599,
+  "device_type": "mouse",
+  "wireless": true,
+  "read": {
+    "battery": { "method": "output_report", "interface": 2, "opcode": 16, "battery_byte": 13, "charging_byte": 14, "charging_bit": 0, "charging_inverted": true },
+    "dpi": { "method": "output_report", "interface": 2, "opcode": 19, "stage_byte": 4, "stage_shift": 4, "stage_mask": 15, "data_start": 5, "stage_stride": 4, "multiplier": 50 },
+    "poll_rate": { "method": "output_report", "interface": 2, "opcode": 18, "value_byte": 4, "map": { "1": 1000, "2": 500, "4": 250, "8": 125 } }
+  }
+}

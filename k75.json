@@ -1,0 +1,13 @@
+{
+  "name": "K75 Mechanical",
+  "version": "1.0.0",
+  "author": "mouse-hub",
+  "description": "機械鍵盤 2.4G",
+  "vid": 13652,
+  "pid": 64137,
+  "device_type": "keyboard",
+  "wireless": true,
+  "read": {
+    "battery": { "method": "feature_report", "report_id": 6, "battery_byte": 3 }
+  }
+}

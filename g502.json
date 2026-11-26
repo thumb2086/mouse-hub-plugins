@@ -1,0 +1,14 @@
+{
+  "name": "Logitech G502 HERO",
+  "version": "1.0.0",
+  "author": "mouse-hub",
+  "description": "有線電競滑鼠",
+  "vid": 1133,
+  "pid": 49291,
+  "device_type": "mouse",
+  "wireless": false,
+  "read": {
+    "dpi": { "method": "ghub_db", "db_path": "LGHUB/settings.db", "json_path": "cards.cards[*].mouseSettings.dpiTable.activeDpi" },
+    "poll_rate": { "method": "ghub_db", "db_path": "LGHUB/settings.db", "json_path": "cards.cards[*].mouseSettings.reportRate.value" }
+  }
+}

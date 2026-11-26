@@ -1,0 +1,13 @@
+{
+  "name": "派洛茲電競滑鼠",
+  "version": "1.0.0",
+  "author": "mouse-hub",
+  "description": "有線電競滑鼠 7200DPI",
+  "vid": 12538,
+  "pid": 5889,
+  "device_type": "mouse",
+  "wireless": false,
+  "read": {
+    "dpi": { "method": "feature_report", "report_id": 7, "stage_byte": 9, "map": { "0": 1200, "2": 2400, "4": 3600, "6": 7200 } }
+  }
+}
